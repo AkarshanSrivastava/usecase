@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot UI</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        form { margin-bottom: 20px; }
+        input { padding: 10px; width: 300px; }
+        button { padding: 10px; }
+        .answer { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Chatbot - Ask a Question</h1>
+    <form method="post">
+        <input type="text" name="question" placeholder="Enter your question..." required>
+        <button type="submit">Ask</button>
+    </form>
+    {% if answer %}
+        <div class="answer">
+            <h3>Answer:</h3>
+            <p>{{ answer }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>
